@@ -39,4 +39,11 @@ my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("THe fruit load list contains:")
-streamlit.dataframe(my_data_rows)
+
+container_selection = st.container()
+
+with container_selection:
+  streamlit.dataframe(my_data_rows)
+  added_fruit = streamlit.text_input('What fruit would you like to add?','jackfruit')
+  my_data_rows.add(added_fruit)
+  streamlit.write('Thanks for adding ', added_fruit)
