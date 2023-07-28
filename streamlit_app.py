@@ -48,3 +48,4 @@ with container_selection:
   added_fruit = streamlit.text_input('What fruit would you like to add?','jackfruit')
   my_data_rows.append(added_fruit)
   streamlit.write('Thanks for adding ', added_fruit)
+  my_cur.execute("insert into FRUIT_LOAD_LIST values ('from streamlit');")
