@@ -44,6 +44,6 @@ container_selection = streamlit.container()
 
 with container_selection:
   streamlit.dataframe(my_data_rows)
-  added_fruit = streamlit.text_input('What fruit would you like to add ?','jackfruit')
+  added_fruit = streamlit.text_input('What fruit would you like to add?','jackfruit')
   my_data_rows.add(added_fruit)
   streamlit.write('Thanks for adding ', added_fruit)
